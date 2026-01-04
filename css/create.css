@@ -27,7 +27,7 @@ body {
     letter-spacing: 1.5px;
     background: linear-gradient(
         135deg,
-        #ab05f8,
+        #9e0efd,
         #ffd700,
         #05b3f8,
         #ffffff
@@ -57,7 +57,7 @@ body {
 .manage,
 .open {
     min-height: 100vh;
-    padding-top: 140px;
+    padding-top: 50px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
