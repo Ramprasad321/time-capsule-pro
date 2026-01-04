@@ -1,0 +1,383 @@
+/* ========================================================= RESET + GLOBAL FONTS ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY TEXT */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #070707;
+    color: #faf9f9;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.4px;
+}
+
+
+/* ========================================================= CSS VARIABLES ========================================================= */
+
+:root {
+    --primary: #6c63ff;
+    --secondary: #00c6ff;
+    --dark: #111827;
+    --light: #f9fafb;
+}
+
+
+/* ========================================================= NAVBAR ========================================================= */
+
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.nav-actions {
+    margin-left: 40px;
+}
+
+/* ================= AUTH NAVBAR ================= */
+
+.auth-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    z-index: 1000;
+}
+
+/* LEFT LOGO */
+.auth-navbar .logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+/* RIGHT LINKS */
+.auth-navbar .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.auth-navbar .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.auth-navbar .nav-link:hover {
+    background: rgba(255,255,255,0.15);
+}
+.auth-page {
+    min-height: 100vh;
+    padding-top: 70px; /* EXACT navbar height */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        120deg,
+        rgba(232,143,47,0.35),
+        #0b1c2d,
+        black,
+        #102f3a
+    );
+
+    background-size: 200% 200%;
+    animation: bgMove 18s ease-in-out infinite;
+}
+.auth-card.glass {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 45px 40px;
+    border-radius: 22px;
+
+    background: rgba(20, 25, 35, 0.55);
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.45),
+        0 0 40px rgba(108,99,255,0.25);
+}
+
+/* ========================================================= HERO SECTION ========================================================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 60px;
+    overflow: hidden;
+
+    background: linear-gradient(
+        100deg,
+        rgb(173, 119, 32),
+        #0b1c2d,
+        black,
+        #102f3a,
+        rgb(173, 119, 32)
+    );
+
+    background-size: 200% 200%;
+    animation: bgMove 18s ease-in-out infinite;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-title {
+    font-size: 3.6rem;
+    line-height: 1.1;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #cfd9e3;
+}
+
+/* HERO IMAGE */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 400px;
+    height: 600px;
+    max-width: 100%;
+    border-radius: 40px;
+    background: #fff;
+    border: 2px solid #e5e7eb;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+
+/* ========================================================= FEATURES / HOW To Use ========================================================= */
+
+.features {
+    padding: 80px 0;
+    background: radial-gradient(
+        circle,
+        rgb(34,22,1),
+        rgb(246,189,55),
+        rgb(5,5,5),
+        rgb(2,2,73),
+        rgb(108,120,248)
+    );
+}
+
+.section-heading h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #fcfcfe;
+}
+
+.section-heading p {
+    font-size: 1.05rem;
+    color: #01132b;
+}
+
+/* FEATURE CARD */
+.feature-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    height: 440px;
+    width: 300px;
+    border: 2px solid whitesmoke;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.feature-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* OVERLAY */
+.feature-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    color: #ffffff;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.25)
+    );
+}
+
+.feature-overlay h5 {
+    font-size: 1.8rem;
+    margin-left: 70px;
+}
+
+.feature-overlay p {
+    margin-left: 30px;
+    margin-bottom: 35px;
+    font-size:0.8rem; ;
+}
+
+/* HOVER */
+.feature-card:hover img {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================WHY TIME CAPSULE SECTION========================================================= */
+
+.why-capsule {
+    padding: 90px 0;
+    background: radial-gradient(
+        circle,
+        white,
+        rgb(108,144,245),
+        rgb(4,36,134),
+        rgb(193,135,19),
+        black
+    );
+}
+
+.why-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #03224b;
+}
+
+.why-text {
+    font-size: 1.1rem;
+    color: #01170a;
+    line-height: 1.8;
+}
+
+.why-img {
+    width: 300px;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 2px solid #f5f7fa;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.move-left { transform: translateX(-60px); }
+.move-right { transform: translateX(40px); }
+
+
+/* =========================================================BUTTON INTERACTIONS========================================================= */
+
+.btn {
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #6c63ff, #00c6ff);
+    border: none;
+}
+
+
+/* =========================================================AUTH PAGES (LOGIN / REGISTER)========================================================= */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        100deg,
+        rgba(232,143,47,0.35),
+        #0b1c2d,
+        black,
+        #102f3a
+    );
+
+    background-size: 200% 200%;
+    animation: bgMove 17s ease-in-out infinite;
+}
+
+.auth-card.glass {
+    max-width: 430px;
+    padding: 45px 40px;
+    border-radius: 22px;
+
+    background: rgba(11,3,77,0.15);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.auth-card input {
+    background: rgb(209,204,249);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.auth-link {
+    color: #93c5fd;
+}
+
+
+/* =========================================================FOOTER========================================================= */
+
+.footer {
+    background: linear-gradient(
+        to top,
+        rgb(24,98,135),
+        rgb(2,58,91),
+        rgb(1,13,69),
+        black
+    );
+    padding: 60px 0;
+    color: #ffffff;
+}
+
+.footer-title {
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin-left: 20px;
+    color: #ffffff;
+}

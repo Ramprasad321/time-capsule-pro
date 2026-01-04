@@ -1,0 +1,154 @@
+body {
+    background: linear-gradient(
+    120deg,
+    rgb(118, 82, 26),
+    #062a4e,
+    rgb(1, 48, 8),
+    rgb(118, 82, 26)
+  );
+  background-size: 200% 200%;
+  animation: bgMove 18s ease infinite;
+  color: #fff;
+    padding-top: 80px;
+    font-family: 'Lobster', cursive !important;
+}
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* Dashboard headings */
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5 ,.navbar-brand{
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1.5px;
+    background: linear-gradient(
+        135deg,
+        #ab05f8,
+        #ffd700,
+        #05b3f8,
+        #ffffff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+/* FULL PAGE SECTION */
+.create {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent; /* body background visible */
+}
+/* COMMON PAGE SECTIONS */
+.create,
+.manage,
+.open {
+    min-height: 100vh;
+    padding-top: 140px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+/* container center alignment */
+.create .container,
+.manage .container,
+.open .container {
+    width: 100%;
+    max-width: 1100px;
+}
+.container h2{
+    color: #fff;
+}
+.create h2 {
+    font-weight: 700;
+}
+
+.form-box {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(16px);
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+}
+
+
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.form-box textarea {
+    height: 120px;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.emoji-bar span {
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.emoji-bar span:hover {
+    transform: scale(1.2);
+}
+.emoji-btn {
+    background: transparent;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Emoji Picker Box */
+.emoji-picker {
+    max-height: 200px;
+    overflow-y: scroll;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.emoji-picker span {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.emoji-picker span:hover {
+    transform: scale(1.3);
+}
+
+.hidden {
+    display: none;
+}

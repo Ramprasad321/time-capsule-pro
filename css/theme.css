@@ -1,0 +1,125 @@
+/* ================= THEME (USED EVERYWHERE) ================= */
+
+body {
+    font-family: 'Lobster', cursive !important;
+    min-height: 100vh;
+}
+
+.form-box,
+.capsule-card {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+/* ================= NAVBAR ================= */
+/* OVERRIDE BOOTSTRAP NAVBAR */
+.navbar {
+    background: rgba(10, 15, 25, 0.6) !important;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar a {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #ffd369 !important;
+}
+
+
+/* ================= GLASS CARD ================= */
+.glass-card {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+
+/* ================= BUTTON ================= */
+.btn-primary {
+    background: linear-gradient(135deg, #6c63ff, #00c6ff);
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,198,255,0.4);
+}
+
+
+/* BACKGROUND SAME AS HOME */
+.theme-bg {
+    min-height: 100vh;
+    background: linear-gradient(
+        100deg,
+        rgba(232,143,47,0.35),
+        #0b1c2d,
+        black,
+        #102f3a,
+        rgba(232,143,47,0.35)
+    );
+    background-size: 200% 200%;
+    animation: bgMove 18s ease-in-out infinite;
+}
+
+/* GLASS CARD (AUTH + DASHBOARD) */
+.glass-card {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+}
+
+/* INPUTS */
+.theme-input {
+    background: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    padding: 12px;
+    border: none;
+}
+
+.theme-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(108,99,255,0.35);
+}
+
+/* BUTTON */
+.theme-btn {
+    background: linear-gradient(135deg, #6c63ff, #00c6ff);
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.theme-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,198,255,0.35);
+}
+
+/* TEXT */
+.theme-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.theme-link {
+    color: #93c5fd;
+}
+.theme-link:hover {
+    text-decoration: underline;
+}
+.empty-msg {
+    color: #ffffff;
+}
