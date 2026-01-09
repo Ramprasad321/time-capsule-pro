@@ -1,0 +1,209 @@
+:root {
+  --primary: #4f46ff;
+  --secondary: cyan;
+  --dark: #070707;
+  --light: #f9fafb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--dark);
+  color: var(--light);
+}
+
+/* =================================================NAVBAR============================================= */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(1, 4, 40,0.6);
+  border: 1px solid#0d4175;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+.logo {
+    font-size: 24px;    
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.nav-links a:hover {
+    color: cyan;
+    background: rgba(255,255,255,0.12);
+}
+
+
+.btn {
+  padding: 8px 18px;
+  background: var(--primary);
+  border-radius: 20px;
+}
+
+/* ===============================HERO========================== */
+.hero {
+    min-height: 100vh;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+.hero-text {
+  color:rgb(3, 215, 252);
+    text-shadow: 0 0 15px rgba(137, 186, 250, 0.6);
+    max-width: 700px;
+    font-family: 'cinzel',serif;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: textIntro 1.4s ease forwards;
+    animation-delay: 0.8s;
+}
+@keyframes textIntro {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero-text h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #fe8402;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(248, 147, 6, 0.6);
+}
+
+.cta {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.glass-card {
+  padding: 40px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 40px rgba(0,255,255,0.4);
+}
+
+
+/* ================= SNOW BACKGROUND ================= */
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* clicks pass through */
+    z-index: 0;
+}
+
+/* Make sure content stays above snow */
+.navbar,
+.hero {
+    position: relative;
+    z-index: 2;
+}
+#snow {
+    filter: blur(0.4px);
+}
+
+/* ================= ABOUT PAGE ================= */
+
+.about-hero {
+    min-height: 60vh;
+    padding: 180px 10% 80px;
+    text-align: center;
+
+    background: linear-gradient(
+        120deg,
+        #0b1c2d,
+        black,
+        #102f3a
+    );
+}
+
+.about-hero h1 {
+   font-family:'cinzel',serif;
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 1.3rem;
+    color: #cbd5e1;
+}
+
+.about-content {
+    padding: 80px 10%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-block {
+    margin-bottom: 60px;
+}
+
+.about-block h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.about-block p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #d1d5db;
+    margin-bottom: 15px;
+}
+
+.about-block ul {
+    padding-left: 20px;
+}
+
+.about-block ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #e5e7eb;
+}
+
+/* Glass cards */
+.about-block.glass {
+    padding: 40px;
+    border-radius: 25px;
+    background: rgba(12, 8, 249, 0.08);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 40px rgba(0,255,255,0.2);
+}

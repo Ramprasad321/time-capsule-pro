@@ -1,4 +1,3 @@
-/* ================= THEME (USED EVERYWHERE) ================= */
 
 body {
     font-family: 'Lobster', cursive !important;
@@ -15,9 +14,8 @@ body {
 }
 
 /* ================= NAVBAR ================= */
-/* OVERRIDE BOOTSTRAP NAVBAR */
-.navbar {
-    background: rgba(10, 15, 25, 0.6) !important;
+/* .navbar {
+    background: rgba(148, 195, 241, 0.6) !important;
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -29,7 +27,7 @@ body {
 
 .navbar a:hover {
     color: #ffd369 !important;
-}
+} */
 
 
 /* ================= GLASS CARD ================= */
@@ -54,22 +52,21 @@ body {
 }
 
 
-/* BACKGROUND SAME AS HOME */
+/* BACKGROUND styling of login/register pages */
 .theme-bg {
     min-height: 100vh;
     background: linear-gradient(
-        100deg,
-        rgba(232,143,47,0.35),
-        #0b1c2d,
-        black,
-        #102f3a,
-        rgba(232,143,47,0.35)
+        45deg,rgb(17, 17, 114),rgb(1, 0, 5),rgba(11, 166, 166, 0.8)
     );
     background-size: 200% 200%;
     animation: bgMove 18s ease-in-out infinite;
 }
-
-/* GLASS CARD (AUTH + DASHBOARD) */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* login form background */
 .glass-card {
     background: rgba(255,255,255,0.12);
     backdrop-filter: blur(18px);
@@ -79,9 +76,11 @@ body {
     box-shadow: 0 25px 60px rgba(0,0,0,0.45);
 }
 
-/* INPUTS */
+/* login form inputs */
 .theme-input {
     background: rgba(255,255,255,0.9);
+    color: #3c0a2e;
+    font-weight: 600;
     border-radius: 12px;
     padding: 12px;
     border: none;
@@ -92,10 +91,10 @@ body {
     box-shadow: 0 0 0 3px rgba(108,99,255,0.35);
 }
 
-/* BUTTON */
+/* login/register BUTTONs */
 .theme-btn {
-    background: linear-gradient(135deg, #6c63ff, #00c6ff);
-    color: #fff;
+    background: linear-gradient(135deg, #a102f6, #00c6ff);
+    color: #fdfbfb;
     border: none;
     border-radius: 14px;
     padding: 12px;
@@ -107,11 +106,11 @@ body {
     box-shadow: 0 10px 25px rgba(0,198,255,0.35);
 }
 
-/* TEXT */
+/* welcome back form Text */
 .theme-title {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    color: #ffffff;
+    color: #fdfbfb;
 }
 
 .theme-link {
@@ -121,5 +120,5 @@ body {
     text-decoration: underline;
 }
 .empty-msg {
-    color: #ffffff;
+    color: #fdfcfc;
 }
